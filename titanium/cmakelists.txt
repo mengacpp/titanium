@@ -14,7 +14,7 @@ target_include_directories(titanium
         ${CMAKE_CURRENT_SOURCE_DIR}/../vendor/oxygen/include)
 
 target_link_libraries(titanium PRIVATE 
-    oxygen)
+    oxygen::oxygen)
 
 target_compile_features(titanium PUBLIC
     cxx_std_17

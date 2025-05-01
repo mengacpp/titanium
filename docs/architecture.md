@@ -1,8 +1,7 @@
 # Titanium architecture and guide lines
 
 > [!NOTE]
-> 🇮🇹 This document is written in Italian
-> it's easier for me to work on this document by writing it in italian, but you can always try to translate it
+> This document is written in Italian because it's easier for me to work on it, but you can always try to translate it
 
 ## Introduzione
 
