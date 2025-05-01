@@ -1,7 +1,8 @@
 
 # Titanium
 
-> [!IMPORTANT] Titanium development still in early stage
+> [!IMPORTANT]
+> Titanium development still in early stage
 > You can't use Titanium to develop games as of now.
 
 ## What is Titanium?
