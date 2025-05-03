@@ -12,6 +12,13 @@ In questo documento viene discussa l'architettura di Titanium. L'obbiettivo è m
 1. **Separazione dei ruoli**
     - Ogni modulo deve avere un ruolo ben definito;
     - Ogni modulo deve essere indipendente dagli altri, nascondendo l'implementazione e lasciando visibile un interfaccia mantenibile.
+2. **Gestione degli errori**
+    - Ogni errore viene gestito usando `throw`;
+    - La struttura del testo di errore deve essere chiara, seguendo generalmente la seguente:
+  
+    ```
+    <Operation> failed on <target>: <cause>. <optional hint>
+    ```
 
 ## Moduli del progetto
 
