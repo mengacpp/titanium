@@ -1,8 +1,8 @@
-#include "titanium/core/Application.hpp"
+#include "titanium/core/application.hpp"
 
 #include <memory>
 
-namespace tit
+namespace titanium
 {
     extern std::unique_ptr<Application> create_application();
 

@@ -1,18 +1,19 @@
-#include "titanium/core/Application.hpp"
+#include "titanium/core/application.hpp"
 
 #include <iostream>
-namespace tit
+
+#include "titanium/core/log.hpp"
+
+namespace titanium
 {
 
     void Application::run()
     {
         m_running = true;
-        
+        std::cout << (LogDebug() << m_specs.name << " running");
+
         while(m_running)
         {
-            // render & update logic goes here
-            std::cout << m_specs.name << " running.\n";
-            
         }
 
 
@@ -20,7 +21,7 @@ namespace tit
 
     void Application::close()
     {
-        // on close logic goes here
-        std::cout << m_specs.name << " closed. ";
+        std::cout << (LogDebug() << m_specs.name << " closed");
+
     }
 }

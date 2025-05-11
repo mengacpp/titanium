@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace tit
+namespace titanium
 {
     struct ApplicationSpecs
     {
