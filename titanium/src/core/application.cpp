@@ -1,27 +1,27 @@
 #include "titanium/core/application.hpp"
 
-#include <iostream>
-
-#include "titanium/core/log.hpp"
-
 namespace titanium
 {
+    Application::Application(const std::string &name)
+    {
+        m_specs.name = name;
 
+        m_window = neon::create_window(m_specs.name);
+    }
+    
     void Application::run()
     {
         m_running = true;
-        std::cout << (LogDebug() << m_specs.name << " running");
+        m_window->init();
 
-        while(m_running)
+        while(!m_window->should_close())
         {
+            m_window->poll_events();
         }
-
-
     }
 
     void Application::close()
     {
-        std::cout << (LogDebug() << m_specs.name << " closed");
 
     }
 }

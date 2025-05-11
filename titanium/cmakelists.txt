@@ -9,25 +9,27 @@ add_library(titanium STATIC ${SOURCES})
 
 target_include_directories(titanium 
     PUBLIC 
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
-    PRIVATE 
-        ${CMAKE_CURRENT_SOURCE_DIR}/vendor/oxygen/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/vendor/neon/include)
+        ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-target_link_libraries(titanium PRIVATE 
-    oxygen
-    neon)
+target_link_libraries(titanium  
+    PUBLIC
+        neon
+        oxygen
+    )
 
 target_compile_features(titanium PUBLIC
     cxx_std_17
 )
 
+target_compile_definitions(titanium PRIVATE TIT_CORE)
+
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    add_definitions(-DTIT_DEBUG)
+    target_compile_definitions(titanium PRIVATE TIT_DEBUG)
 endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
-    add_definitions(-DTIT_RELEASE)
+    target_compile_definitions(titanium PRIVATE TIT_RELEASE)
+
 endif()
 
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g")

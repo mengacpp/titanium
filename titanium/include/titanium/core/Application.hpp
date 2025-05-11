@@ -1,6 +1,9 @@
 #pragma once
 
 #include <string>
+#include <memory>
+
+#include "neon/window.hpp"
 
 namespace titanium
 {
@@ -12,7 +15,7 @@ namespace titanium
     class Application 
     {
     public:
-        Application() = default;
+        Application(const std::string &name);
         ~Application() = default;
 
         void run();
@@ -23,6 +26,7 @@ namespace titanium
 
     protected:
         ApplicationSpecs m_specs;
+        std::unique_ptr<neon::Window> m_window;
         
     private:
 
