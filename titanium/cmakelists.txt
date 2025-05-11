@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
 
-find_package(oxygen 0.1 REQUIRED)
-
 set(CMAKE_CXX_STANDARD          17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS        OFF)
@@ -13,11 +11,11 @@ target_include_directories(titanium
     PUBLIC 
         ${CMAKE_CURRENT_SOURCE_DIR}/include
     PRIVATE 
-        ${OXYGEN_INCLUDE_DIRS}
+        ${CMAKE_CURRENT_SOURCE_DIR}/vendor/oxygen/include
         ${CMAKE_CURRENT_SOURCE_DIR}/vendor/neon/include)
 
 target_link_libraries(titanium PRIVATE 
-    oxygen::oxygen 
+    oxygen
     neon)
 
 target_compile_features(titanium PUBLIC

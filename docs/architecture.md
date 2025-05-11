@@ -16,7 +16,7 @@ In questo documento viene discussa l'architettura di Titanium. L'obbiettivo è m
     - Ogni errore viene gestito usando `throw`;
     - La struttura del testo di errore deve essere chiara, seguendo generalmente la seguente:
   
-    ```
+    ```bat
     <Operation> failed on <target>: <cause>. <optional hint>
     ```
 
@@ -25,7 +25,7 @@ In questo documento viene discussa l'architettura di Titanium. L'obbiettivo è m
 Per facilitare l'espansione futura del progetto, Titanium è diviso in 5 moduli:
 
 1. **Titanium (core):**
-    - Application, Event system, Logging system ecc.
+    - Application, Event system, Game objects ecc.
     - *Dipende da Argon, Neon e Oxygen*
 2. **Platinum (editor):**
     - Creare e modificare progetti Titanium
@@ -35,6 +35,7 @@ Per facilitare l'espansione futura del progetto, Titanium è diviso in 5 moduli:
     - *Dipende da Vulkan e Oxygen*
 4. **Neon (platform abstraction):**
     - Astrae la creazione di finestre e l'input handling
-    - *Dipende da Oxygen*
+    - *Dipende da Oxygen e GLFW*
 5. **Oxygen (utilities)**
     - Raccoglie tutte le funzioni utili per semplificare e rendere coesa la programmazione degli altri moduli
+  
