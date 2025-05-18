@@ -2,10 +2,10 @@
 
 #include <memory>
 
-namespace titanium
+namespace ttnm
 {
     extern std::unique_ptr<Application> create_application();
 
-    void start(int argc, char **argv);
+    int start(int argc, char **argv);
 }
 

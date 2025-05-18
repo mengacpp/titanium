@@ -5,7 +5,9 @@
 
 #include "neon/window.hpp"
 
-namespace titanium
+#include "oxygen/outcome.hpp"
+
+namespace ttnm
 {
     struct ApplicationSpecs
     {
@@ -18,9 +20,9 @@ namespace titanium
         Application(const std::string &name);
         ~Application() = default;
 
-        void run();
+        xgn::Outcome init();
 
-        void close();
+        xgn::Outcome run();
 
         inline ApplicationSpecs get_specs() const {return m_specs; };
 
@@ -30,6 +32,7 @@ namespace titanium
         
     private:
 
-        bool m_running;
+        bool m_is_running;
+        bool m_is_initialized;
     };
 }
