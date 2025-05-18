@@ -47,8 +47,7 @@ Titanium is linking to these libraries:
     git clone --recursive https://github.com/mengacpp/titanium
     ```
 
-    > [!TIP]
-    > If you have already cloned the repostory without the `--recursive` flag, navigate to the directory and run `git submodule update --init --recursive` to initialize and update the submodules now.
+    If you have already cloned the repostory without the `--recursive` flag, navigate to the directory and run `git submodule update --init --recursive` to initialize and update the submodules now.
 2. Navigate to the directory where you cloned the repostory and run CMake to build and compile Titanium:
 
     ```cli
